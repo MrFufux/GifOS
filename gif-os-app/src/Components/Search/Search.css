@@ -1,0 +1,105 @@
+.search-container{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+  }
+
+  .search-h1-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-h1{
+    margin-top: 6.5rem;
+    font-size: 3.6rem;
+    /* font-family: var(--font-main); */
+    font-weight: 700;
+    line-height: 4.2rem;
+    color: #572EE5;
+    transition:  color 0.6s;
+  }
+
+  .search-div {
+    display: flex;
+    justify-content: center;
+  }
+
+  .search-input{
+    width: 50%;
+    padding: 0.5rem 3rem;
+    border: 0.1rem solid #121212;
+    border-right: none;
+    border-radius: 6.1rem 0 0 6.1rem;
+    font-size: 2.4rem;
+    color: #572EE5;
+    outline: none;
+    transition: background-color 0.6s, color 0.6s;
+  }
+
+  .search-button{
+    width: 5.2rem;
+    border: 0.1rem solid #121212;
+    border-radius: 0 6.1rem 6.1rem 0;
+    background-color: #572EE5;
+    transition: border 0.6s;
+    cursor: pointer;
+  }
+  .search-button-img {
+    padding-top: 0.3rem;
+  }
+
+  .search-h3{
+    display: flex;
+    justify-content: center;
+    margin-top: 7.9rem;
+    color: #fff;
+  }
+
+
+
+
+  /*Dark Mode Styles*/
+
+  .search-container-darkmode{
+    background-color: #373737;
+  }
+  .search-h1-dark {
+    margin-top: 6.5rem;
+    font-size: 3.6rem;
+    /* font-family: var(--font-main); */
+    font-weight: 700;
+    line-height: 4.2rem;
+    color: #572EE5;
+    transition:  color 0.6s;
+    color: #fff;
+  }
+  .search-input-dark{
+    background-color: #373737;
+    border: 0.1rem solid #fff;
+    color: #fff;
+    width: 50%;
+    height: 100%;
+    padding: 0.5rem 3rem;
+    border-radius: 6.1rem 0 0 6.1rem;
+    font-size: 2.4rem;
+    color: #fff;
+    outline: none;
+    transition: background-color 0.6s, color 0.6s;
+  }
+  .search-button-dark{
+    border: 0.1rem solid #fff;
+    width: 5.2rem;
+    border-radius: 0 6.1rem 6.1rem 0;
+    background-color: #572EE5;
+    transition: border 0.6s;
+    cursor: pointer;
+  }
+
+  .search-h3-dark{
+    display: flex;
+    justify-content: center;
+    margin-top: 7.9rem;
+    color: #572EE5;
+  }

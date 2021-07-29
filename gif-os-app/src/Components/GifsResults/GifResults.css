@@ -1,0 +1,20 @@
+.gifResult-container{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 2rem;
+    padding: 3rem 3rem;
+    transition: background-color 0.6s;
+}
+
+.gifResult-container-dark{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 2rem;
+    padding: 3rem 3rem;
+    background-color: #373737;
+    transition: background-color 0.6s;
+}
