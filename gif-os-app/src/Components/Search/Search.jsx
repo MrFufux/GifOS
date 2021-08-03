@@ -31,27 +31,27 @@ function Search(){
     })
 
     return(
-        <div className = {backGroundDarkMode}>
+        <div className={backGroundDarkMode}>
             <div>
                 <div className="search-h1-img">
-                    <h1 className = {h1DarkMode}>Inspire yourself and search the best GIFS!</h1>
+                    <h1 className={h1DarkMode}>Inspire yourself and search the best GIFS!</h1>
                     <img src='/resources/ilustra_header.svg' alt='friends pic' />
                 </div>
             </div>
             <div className='search-div'>
                 <input 
-                    className = {inputDarkMode} 
-                    type = "text" 
-                    value = {search}
-                    placeholder = "Gif Search"
-                    onChange ={searchHandler}
+                    className={inputDarkMode} 
+                    type="text" 
+                    value={search}
+                    placeholder="Gif Search"
+                    onChange={searchHandler}
                 />
                 <button 
-                    className = {buttonDarkMode}
-                    onClick = {buttonSearchHandler}
+                    className={buttonDarkMode}
+                    onClick={buttonSearchHandler}
                     
                 >
-                    <img className = "search-button-img" alt="icon-search" src="/resources/icon-search-mod-noc.svg"/>
+                    <img className="search-button-img" alt="icon-search" src="/resources/icon-search-mod-noc.svg"/>
                 </button>
                 <div></div>
             </div>
