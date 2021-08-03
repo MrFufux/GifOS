@@ -3,6 +3,8 @@ import "./Search.css";
 
 import {AppContext} from "../../Contexts/AppContext";
 
+import {APISuggest} from "../../Utilities/constants";
+
 
 
 function Search(){
@@ -10,7 +12,9 @@ function Search(){
     //global states
     const {darkMode} = useContext(AppContext);
     const {search, setSearch} = useContext(AppContext);
+    const {textResult, setTextResult} = useContext(AppContext);
     const {buttonSearch, setButtonSearch} = useContext(AppContext);
+    const {dataSuggest, setDataSuggest} = useContext(AppContext);
 
     //changehandlers
     const searchHandler = (e) => setSearch(e.target.value);
@@ -26,9 +30,17 @@ function Search(){
     const buttonDarkMode = darkMode ? "search-button-dark" : "search-button";
 
     useEffect(()=>{
-        
+        if(textResult && search.length > 0) {
+            async function suggestion() {
+                const respond = await APISuggest(search);
+                const ApiData = await respond.json();
+                setDataSuggest(ApiData.data)
+                console.log(respond);
+            }
+            suggestion();
+        }
 
-    })
+    }, [textResult, search])
 
     return(
         <div className={backGroundDarkMode}>

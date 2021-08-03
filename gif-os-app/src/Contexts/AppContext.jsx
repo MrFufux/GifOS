@@ -17,6 +17,7 @@ function AppProvider({children}){
     const [search, setSearch] = useState('');
     const [buttonSearch, setButtonSearch] = useState(false)
     const [textResult, setTextResult] = useState('Do your Gif searches');
+    const [dataSuggest, setDataSuggest] = useState([]);
     return(
         <AppContext.Provider value={{
             darkMode, 
@@ -26,7 +27,9 @@ function AppProvider({children}){
             buttonSearch,
             setButtonSearch,
             textResult,
-            setTextResult
+            setTextResult,
+            dataSuggest,
+            setDataSuggest
             
             }}>
             {children}
