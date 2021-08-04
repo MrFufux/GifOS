@@ -8,15 +8,16 @@ function Autocomplete({recommendation}){
     const {darkMode} = useContext(AppContext);
     const {setSearch} = useContext(AppContext);
     const {buttonSearch, setButtonSearch} = useContext(AppContext);
+
     const importName = () => {
         setSearch(recommendation)
         setButtonSearch(!buttonSearch)
     };
 
     //darkmode variable
-    const autocompleteDarkMode = darkMode ? "autocomp-dark" : "autocomp";
+    const autocompDarkMode = darkMode ? "autocomp-dark" : "autocomp";
     return (
-        <div className={autocomp} onClick={importName}>
+        <div className={autocompDarkMode} onClick={importName}>
             <p>{recommendation}</p>
         </div>
     );

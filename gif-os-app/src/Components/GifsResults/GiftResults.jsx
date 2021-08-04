@@ -29,7 +29,7 @@ function Gifs(){
     const backDarkMode = darkMode ? "gifResult-container-dark" : "gifResult-container";
     const textDarkMode = darkMode ? "" : "";
     return(
-        <div className='gifResult-container'>
+        <div className={backDarkMode}>
             gif light
         </div>
     );
