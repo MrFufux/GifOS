@@ -30,7 +30,7 @@ function Gifs(){
     const textDarkMode = darkMode ? "" : "";
     return(
         <div className={backDarkMode}>
-            gif light
+            <CardGif/>
         </div>
     );
 };
