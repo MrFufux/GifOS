@@ -15,9 +15,9 @@ function Autocomplete({recommendation}){
     //darkmode variable
     const autocompDarkMode = darkMode ? "autocomp-dark" : "autocomp";
     return (
-        <div className={autocompDarkMode} onClick={importName}>
-            <p>{recommendation}</p>
-        </div>
+        <p className={autocompDarkMode} onClick={importName}>
+            {recommendation}
+        </p>
     );
 };
 

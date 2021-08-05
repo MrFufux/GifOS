@@ -1,39 +1,50 @@
-import "./Search.css";
+/** 
+ * Dependencies
+ */
 import {useContext, useEffect} from "react";
 
+/** *
+ * Styles
+ */
+import "./Search.css";
+import "../Autocomplete/Autocomplete.css";
+
+/** *
+ * Others
+ */
 import {AppContext} from "../../Contexts/AppContext";
 
 import Autocomplete from "../Autocomplete/AutoComplete";
 
 import {APIRequest, APISuggest} from "../../Utilities/constants";
 
-/**
- * UseEffects
-*/
 
 function Search(){
-
+    
     //global states
     const {
         darkMode, 
         search, setSearch,
         textResult, setTextResult,
         buttonSearch, setButtonSearch,
-        setDataSuggest
-        } = useContext(AppContext);
-
+        dataSuggest, setDataSuggest
+    } = useContext(AppContext);
+    
     //changehandlers
     const searchHandler = (e) => setSearch(e.target.value);
-    const buttonSearchHandler = (e) => setButtonSearch(!buttonSearch);
-
+    const buttonSearchHandler = () => setButtonSearch(!buttonSearch);
+    
     //Dark Mode Variables
     const backGroundDarkMode = darkMode ? "search-container-darkmode" : "search-container";
     const h1DarkMode = darkMode ? "search-h1-dark" : "search-h1";
     const inputDarkMode = darkMode ? "search-input-dark" : "search-input";
     const searchResultDarkMode = darkMode ? "search-h3" : "search-h3-dark";
     const buttonDarkMode = darkMode ? "search-button-dark" : "search-button";
-
-
+    const autocompleteDarkMode = darkMode ? "autocomp-dark" : "autocomp";
+    
+    /**
+     * UseEffects
+    */
 
     //useEffect request
     useEffect(()=>{
@@ -77,6 +88,16 @@ function Search(){
         }
     }, [search])
 
+    //Suggestions render
+    const autocompleteComponent = dataSuggest.map((recommend) => {
+        return(
+            <Autocomplete 
+                key={recommend.analytics_response_payload}
+                name={recommend.name}
+            />
+        );
+    })
+
     return(
         <div className={backGroundDarkMode}>
             <div>
@@ -100,7 +121,7 @@ function Search(){
                 >
                     <img className="search-button-img" alt="icon-search" src="/resources/icon-search-mod-noc.svg"/>
                 </button>
-                <div></div>
+                <div className={autocompleteDarkMode}>{autocompleteComponent}</div>
             </div>
             <h3 className={searchResultDarkMode}>Search Results</h3>
         </div>
