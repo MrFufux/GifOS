@@ -5,9 +5,7 @@ import { useContext } from 'react';
 function Autocomplete({recommendation}){
 
     //global states
-    const {darkMode} = useContext(AppContext);
-    const {setSearch} = useContext(AppContext);
-    const {buttonSearch, setButtonSearch} = useContext(AppContext);
+    const {darkMode, setSearch, buttonSearch, setButtonSearch} = useContext(AppContext);
 
     const importName = () => {
         setSearch(recommendation)

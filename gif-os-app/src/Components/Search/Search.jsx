@@ -14,11 +14,13 @@ import {APIRequest, APISuggest} from "../../Utilities/constants";
 function Search(){
 
     //global states
-    const {darkMode} = useContext(AppContext);
-    const {search, setSearch} = useContext(AppContext);
-    const {textResult, setTextResult} = useContext(AppContext);
-    const {buttonSearch, setButtonSearch} = useContext(AppContext);
-    const {setDataSuggest} = useContext(AppContext);
+    const {
+        darkMode, 
+        search, setSearch,
+        textResult, setTextResult,
+        buttonSearch, setButtonSearch,
+        setDataSuggest
+        } = useContext(AppContext);
 
     //changehandlers
     const searchHandler = (e) => setSearch(e.target.value);
@@ -39,7 +41,7 @@ function Search(){
             async function gifsRequest(){
                 try{
                     setTextResult("Loading Gifs...")
-                    const respond = await APISuggest(search)
+                    const respond = await APIRequest(search)
                     const data = await respond.json()
                     setDataSuggest([])
                     setButtonSearch(false)
@@ -58,7 +60,7 @@ function Search(){
     useEffect(()=>{
         if(textResult && search.length > 0) {
             async function suggestion() {
-                const respond = await APIRequest(search);
+                const respond = await APISuggest(search);
                 const ApiData = await respond.json();
                 setDataSuggest(ApiData.data)
                 console.log(ApiData);
