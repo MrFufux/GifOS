@@ -1,12 +1,15 @@
+//variables de endpoint
+const URLGiphy = "https://api.giphy.com/v1"
+const APIKey = "api_key=MmD3CusxRY7kxpOjRPNJPQWpeJOD4hgj"
 
 function APIRequest (url) {
-    return fetch (`https://api.giphy.com/v1/gifs/search?api_key=MmD3CusxRY7kxpOjRPNJPQWpeJOD4hgj&q=${url}&limit=12&offset=0&rating=g&lang=en`)
+    return fetch (`${URLGiphy}/gifs/search?${APIKey}&q=${url}&limit=12&offset=0&rating=g&lang=en`)
 };
 
 
 //Fetch for the suggest gif search
 function APISuggest(url) {
-    return fetch(`https://api.giphy.com/v1/gifs/tags?api_key=MmD3CusxRY7kxpOjRPNJPQWpeJOD4hgj&q=${url}&limit=5&offset=0`)
+    return fetch(`${URLGiphy}/gifs/search/tags?${APIKey}&q=${url}&limit=5&offset=0&rating`)
 }
 
 
