@@ -121,8 +121,8 @@ function Search(){
                 >
                     <img className="search-button-img" alt="icon-search" src="/resources/icon-search-mod-noc.svg"/>
                 </button>
-                <div className={autocompleteDarkMode}>{autocompleteComponent}</div>
             </div>
+            <div className={autocompleteDarkMode}>{autocompleteComponent}</div>
             <h3 className={searchResultDarkMode}>Search Results</h3>
         </div>
     );
