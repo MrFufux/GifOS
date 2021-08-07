@@ -54,10 +54,9 @@
     display: flex;
     justify-content: center;
     margin-top: 7.9rem;
+    /* margin-left: 50rem; */
     color: #fff;
   }
-
-
 
 
   /*Dark Mode Styles*/

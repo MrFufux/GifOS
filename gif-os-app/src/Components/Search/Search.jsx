@@ -13,10 +13,9 @@ import "../Autocomplete/Autocomplete.css";
  * Others
  */
 import {AppContext} from "../../Contexts/AppContext";
-
 import Autocomplete from "../Autocomplete/AutoComplete";
-
 import {APIRequest, APISuggest} from "../../Utilities/constants";
+
 
 
 function Search(){
@@ -27,12 +26,18 @@ function Search(){
         search, setSearch,
         textResult, setTextResult,
         buttonSearch, setButtonSearch,
-        dataSuggest, setDataSuggest
+        dataSuggest, setDataSuggest,
+        gif, setGif
     } = useContext(AppContext);
     
     //changehandlers
     const searchHandler = (e) => setSearch(e.target.value);
     const buttonSearchHandler = () => setButtonSearch(!buttonSearch);
+
+    //onBlur handler
+    const onBlurHandler = () => {
+        setTimeout(() => setDataSuggest([]), 300 );
+    }
     
     //Dark Mode Variables
     const backGroundDarkMode = darkMode ? "search-container-darkmode" : "search-container";
@@ -46,30 +51,9 @@ function Search(){
      * UseEffects
     */
 
-    //useEffect request
-    useEffect(()=>{
-        if(buttonSearch){
-            async function gifsRequest(){
-                try{
-                    setTextResult("Loading Gifs...")
-                    const respond = await APIRequest(search)
-                    const data = await respond.json()
-                    setDataSuggest([])
-                    setButtonSearch(false)
-                    if(data.data.length === 0){
-                        setTextResult(`Sorry. We haven't find ${search}`)
-                    }
-                } catch(error){
-                    alert('Oops! Something went wrong :c Try again.')
-                }
-            }
-            gifsRequest()
-        }
-    }, [buttonSearch])
-
     //useEffect suggestions
     useEffect(()=>{
-        if(textResult && search.length > 0) {
+        if(search.length > 0) {
             async function suggestion() {
                 const respond = await APISuggest(search);
                 const ApiData = await respond.json();
@@ -79,14 +63,14 @@ function Search(){
             suggestion();
         }
 
-    }, [textResult, search])
-
-    //Empty suggest remover
-    useEffect(()=> {
-        if(search.length < 1) {
-            setDataSuggest([])
-        }
     }, [search])
+
+    // //Empty suggest remover
+    // useEffect(()=> {
+    //     if(search.length < 1) {
+    //         setDataSuggest([])
+    //     }
+    // }, [search])
 
     //Suggestions render
     const autocompleteComponent = dataSuggest.map((recommend) => {
@@ -113,6 +97,7 @@ function Search(){
                     value={search}
                     placeholder="Gif Search"
                     onChange={searchHandler}
+                    onBlur={onBlurHandler}
                 />
                 <button 
                     className={buttonDarkMode}
