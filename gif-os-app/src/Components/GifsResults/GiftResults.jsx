@@ -38,7 +38,7 @@ function Gifs(){
                         console.log(data);
                     }
                 } catch(error){
-                    alert('Oops! Something went wrong :c Try again.')
+                    setSearch('Oops! Something went wrong :c Try again.')
                 }
             }
             gifsRequest();

@@ -14,7 +14,7 @@ import "../Autocomplete/Autocomplete.css";
  */
 import {AppContext} from "../../Contexts/AppContext";
 import Autocomplete from "../Autocomplete/AutoComplete";
-import {APIRequest, APISuggest} from "../../Utilities/constants";
+import {APISuggest} from "../../Utilities/constants";
 
 
 
@@ -24,10 +24,8 @@ function Search(){
     const {
         darkMode, 
         search, setSearch,
-        textResult, setTextResult,
         buttonSearch, setButtonSearch,
         dataSuggest, setDataSuggest,
-        gif, setGif
     } = useContext(AppContext);
     
     //changehandlers
@@ -36,7 +34,7 @@ function Search(){
 
     //onBlur handler
     const onBlurHandler = () => {
-        setTimeout(() => setDataSuggest([]), 300 );
+        setTimeout(() => setDataSuggest([]), 400 );
     }
     
     //Dark Mode Variables
@@ -52,7 +50,7 @@ function Search(){
     */
 
     //useEffect suggestions
-    useEffect(()=>{
+    useEffect(() => {
         if(search.length > 0) {
             async function suggestion() {
                 const respond = await APISuggest(search);
@@ -65,19 +63,19 @@ function Search(){
 
     }, [search])
 
-    // //Empty suggest remover
-    // useEffect(()=> {
-    //     if(search.length < 1) {
-    //         setDataSuggest([])
-    //     }
-    // }, [search])
+    //Empty suggest remover
+    useEffect(()=> {
+        if(search.length < 1) {
+            setDataSuggest([])
+        }
+    }, [search])
 
     //Suggestions render
     const autocompleteComponent = dataSuggest.map((recommend) => {
         return(
             <Autocomplete 
                 key={recommend.analytics_response_payload}
-                name={recommend.name}
+                reco={recommend.name}
             />
         );
     })

@@ -14,7 +14,7 @@ function AppProvider({children}){
 
     //states
     const [darkMode, setDarkMode] = useState(false);
-    const [search, setSearch] = useState('');
+    const [search, setSearch] = useState("");
     const [buttonSearch, setButtonSearch] = useState(false)
     const [textResult, setTextResult] = useState('Do your Gif searches');
     const [dataSuggest, setDataSuggest] = useState([]);
