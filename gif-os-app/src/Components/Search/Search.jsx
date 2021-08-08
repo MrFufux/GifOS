@@ -75,7 +75,7 @@ function Search(){
         return(
             <Autocomplete 
                 key={recommend.analytics_response_payload}
-                reco={recommend.name}
+                recommendation={recommend.name}
             />
         );
     })
