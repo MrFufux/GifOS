@@ -4,10 +4,9 @@
     height: auto;
     font-size: 2.4rem;
     font-weight: 400;
-    color: #572EE5;
-    /* border: 1px solid #000; */
+    color: var(--purple-blue);
     z-index: 10;
-    
+    /* border: 1px solid #000; */
 }
 
 .autocomp:hover{
@@ -21,13 +20,12 @@
     height: auto;
     font-size: 2.4rem;
     font-weight: 400;
-    color: #fff;
-    /* border: 1px solid #ffff; */
+    color: var(--white);
     z-index: 10;
-    cursor: pointer;
+    /* border: 1px solid #ffff; */
 }
 .autocomp-dark:hover{
     cursor: pointer;
-    background-color: #572EE5;
+    background-color: var(--purple-blue);
 }
     

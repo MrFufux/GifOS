@@ -20,10 +20,10 @@
 .header-container-button{
     width: 14.8rem;
     height: 4.3rem;
-    color: var(--purple);
-    border-color: var(--purple);
+    color: var(--purple-blue);
+    border-color: var(--purple-blue);
     border-style: solid;
-    background-color: #fff;
+    background-color: var(--white);
     border-radius: 2rem;
     outline: none;
     cursor: pointer;
@@ -37,17 +37,17 @@ Dark styles
 */
 
 .header-dark{
-    background-color:#373737;
+    background-color:var(--darkcolor);
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 8.5rem;
 }
   .dark-header-container-button {
-    color: #fff;
-    border-color:#fff;
+    color: var(--white);
+    border-color:var(--white);
     border-style: solid;
-    background-color: #373737;
+    background-color: var(--darkcolor);
     width: 14.8rem;
     height: 4.3rem;
     border-style: solid;

@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 :root {
-  --purple: rgb(143, 31, 218);
+  --purple-blue: #572EE5;
+  --white: #fff;
+  --darkcolor: #373737;
+  --font-family: 'Roboto', sans-serif;
 }
 
 *{
@@ -14,7 +18,7 @@ html{
 }
 
 .App {
-  font-family: sans-serif;
+  font-family: var(--font-family);
   text-align: center;
   min-height: 100vh;
   transition: background-color 0.5s ease;

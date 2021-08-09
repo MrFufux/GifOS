@@ -18,7 +18,7 @@
     /* font-family: var(--font-main); */
     font-weight: 700;
     line-height: 4.2rem;
-    color: #572EE5;
+    color: var(--purple-blue);
     transition:  color 0.6s;
   }
 
@@ -34,7 +34,7 @@
     border-right: none;
     border-radius: 6.1rem 0 0 6.1rem;
     font-size: 2.4rem;
-    color: #572EE5;
+    color: var(--purple-blue);
     outline: none;
     transition: background-color 0.6s, color 0.6s;
   }
@@ -43,7 +43,7 @@
     width: 5.2rem;
     border: 0.1rem solid #121212;
     border-radius: 0 6.1rem 6.1rem 0;
-    background-color: #572EE5;
+    background-color: var(--purple-blue);
     transition: border 0.6s;
     cursor: pointer;
   }
@@ -55,24 +55,23 @@
     display: flex;
     justify-content: center;
     margin-top: 7.9rem;
-    /* margin-left: 50rem; */
     color: #fff;
-    
+    /* margin-left: 50rem; */
   }
 
   
   /*Dark Mode Styles*/
 
   .search-container-darkmode{
-    background-color: #373737;
+    background-color: var( --darkcolor);
   }
   .search-h1-dark {
     margin-top: 6.5rem;
     font-size: 3.6rem;
-    /* font-family: var(--font-main); */
+    font-family: var(--font-family);
     font-weight: 700;
     line-height: 4.2rem;
-    color: #572EE5;
+    color: var(--purple-blue);
     transition:  color 0.6s;
     color: #fff;
   }
@@ -93,7 +92,7 @@
     border: 0.1rem solid #fff;
     width: 5.2rem;
     border-radius: 0 6.1rem 6.1rem 0;
-    background-color: #572EE5;
+    background-color: var(--purple-blue);
     transition: border 0.6s;
     cursor: pointer;
   }
@@ -102,5 +101,5 @@
     display: flex;
     justify-content: center;
     margin-top: 7.9rem;
-    color: #572EE5;
+    color: var(--purple-blue);
   }
