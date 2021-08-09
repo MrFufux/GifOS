@@ -36,13 +36,18 @@ function Search(){
     const onBlurHandler = () => {
         setTimeout(() => setDataSuggest([]), 400 );
     }
+    //Search Enter key function
+    const enterKey = (e) => {
+        if(e.keyCode === 13){ //Enter key code from https://keycode.info
+            setButtonSearch(!buttonSearch);
+        }
+    }
     
     //Dark Mode Variables
     const backGroundDarkMode = darkMode ? "search-container-darkmode" : "search-container";
     const h1DarkMode = darkMode ? "search-h1-dark" : "search-h1";
     const inputDarkMode = darkMode ? "search-input-dark" : "search-input";
     const buttonDarkMode = darkMode ? "search-button-dark" : "search-button";
-    const autocompleteDarkMode = darkMode ? "autocomp-dark" : "autocomp";
     const searchResultDarkMode = darkMode ? "search-h3" : "search-h3-dark";
     
     /**
@@ -70,6 +75,8 @@ function Search(){
         }
     }, [search])
 
+
+
     //Suggestions render
     const autocompleteComponent = dataSuggest.map((recommend) => {
         return(
@@ -94,6 +101,7 @@ function Search(){
                     type="text" 
                     value={search}
                     placeholder="Gif Search"
+                    onKeyDown={enterKey}
                     onChange={searchHandler}
                     onBlur={onBlurHandler}
                 />

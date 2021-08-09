@@ -5,8 +5,14 @@
     font-size: 2.4rem;
     font-weight: 400;
     color: #572EE5;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     z-index: 10;
+    
+}
+
+.autocomp:hover{
+    cursor: pointer;
+    background-color: #bbbbbb;
 }
 
 .autocomp-dark{
@@ -16,7 +22,12 @@
     font-size: 2.4rem;
     font-weight: 400;
     color: #fff;
-    border: 1px solid #ffff;
+    /* border: 1px solid #ffff; */
     z-index: 10;
+    cursor: pointer;
+}
+.autocomp-dark:hover{
+    cursor: pointer;
+    background-color: #572EE5;
 }
     
