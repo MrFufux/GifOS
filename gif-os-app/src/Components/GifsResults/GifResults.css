@@ -1,17 +1,21 @@
 .gifResult-container{
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
     height: auto;
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
     row-gap: 2rem;
     padding: 3rem 3rem;
     transition: background-color 0.6s;
 }
 
+
+/*Dark Mode*/
 .gifResult-container-dark{
     width: 100%;
     height: auto;
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
     row-gap: 2rem;
     padding: 3rem 3rem;

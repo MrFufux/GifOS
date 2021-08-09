@@ -3,7 +3,7 @@ const URLGiphy = "https://api.giphy.com/v1"
 const APIKey = "api_key=MmD3CusxRY7kxpOjRPNJPQWpeJOD4hgj"
 
 function APIRequest (url) {
-    return fetch (`${URLGiphy}/gifs/search?${APIKey}&q=${url}&limit=12&offset=0&rating=g&lang=en`)
+    return fetch (`${URLGiphy}/gifs/search?${APIKey}&q=${url}&limit=20&offset=0&rating=g&lang=en`)
 };
 
 

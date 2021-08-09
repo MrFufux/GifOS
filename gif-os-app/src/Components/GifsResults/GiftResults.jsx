@@ -1,11 +1,19 @@
-import {useContext, useEffect} from 'react';
-import { AppContext } from '../../Contexts/AppContext';
-
+/**
+ * Styles
+ */
 import "./GifResults.css";
 
-
+/**
+ * Components
+ */
 import CardGif from '../CardGifs/CardGif';
 import {APIRequest} from '../../Utilities/constants';
+
+/**
+ * Others 
+ */
+import {useContext, useEffect} from 'react';
+import { AppContext } from '../../Contexts/AppContext';
 
 function Gifs(){
 
@@ -15,12 +23,13 @@ function Gifs(){
         buttonSearch, setButtonSearch,
         textResult, setTextResult,
         gif, setGif,
-        setDataSuggest
         
         } = useContext(AppContext);
 
     
+    //Darkmode variable
     const backDarkMode = darkMode ? "gifResult-container-dark" : "gifResult-container";
+    const textDarkMode = darkMode ? "" : "";
 
     //useEffect request
     useEffect(()=>{
@@ -30,9 +39,9 @@ function Gifs(){
                     setTextResult("Loading Gifs...")
                     const respond = await APIRequest(search);
                     const data = await respond.json();
-                    setDataSuggest([]);
                     setButtonSearch(false);
                     setGif(data.data);
+                    console.log(data.data);
                     if(data.data.length === 0){
                         setTextResult(`Sorry. We haven't find ${search}`)
                         console.log(data);
@@ -53,7 +62,7 @@ function Gifs(){
         return(
             <CardGif 
                 key={gifs.id}
-                reditectURL={urlGiphy}
+                apiURL={urlGiphy}
                 localURL={urlRender}
                 title={titleAlt}
             />
@@ -62,12 +71,12 @@ function Gifs(){
 
     //Gifs render conditional
      const renderGifs = 
-     gif > 0 ? (
+     gif.length > 0 ? (
         gifRender
      ) : (
          <p>{textResult}</p>  
      );
-        return <section>{renderGifs}</section>
+        return <section className={backDarkMode}>{renderGifs}</section>
             
 };
 
