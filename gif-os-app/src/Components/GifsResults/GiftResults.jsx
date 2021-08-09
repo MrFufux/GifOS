@@ -65,7 +65,7 @@ function Gifs(){
      gif > 0 ? (
         gifRender
      ) : (
-         <p>{textResult}</p>
+         <p>{textResult}</p>  
      );
         return <section>{renderGifs}</section>
             

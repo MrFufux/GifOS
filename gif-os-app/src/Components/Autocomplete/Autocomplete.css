@@ -1,19 +1,22 @@
 .autocomp{
-    margin-left: 43rem;
-    width: 50%;
-    height: 2.8rem;
+    margin-left: 30rem;
+    width: 40%;
+    height: auto;
     font-size: 2.4rem;
     font-weight: 400;
     color: #572EE5;
     border: 1px solid #000;
+    z-index: 10;
 }
 
 .autocomp-dark{
-    margin-left: 43rem;
-    width: 50%;
-    height: 2.8rem;
+    margin-left: 30rem;
+    width: 40%;
+    height: auto;
     font-size: 2.4rem;
     font-weight: 400;
     color: #fff;
     border: 1px solid #ffff;
+    z-index: 10;
 }
+    

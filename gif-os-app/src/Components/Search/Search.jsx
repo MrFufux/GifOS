@@ -41,9 +41,9 @@ function Search(){
     const backGroundDarkMode = darkMode ? "search-container-darkmode" : "search-container";
     const h1DarkMode = darkMode ? "search-h1-dark" : "search-h1";
     const inputDarkMode = darkMode ? "search-input-dark" : "search-input";
-    const searchResultDarkMode = darkMode ? "search-h3" : "search-h3-dark";
     const buttonDarkMode = darkMode ? "search-button-dark" : "search-button";
     const autocompleteDarkMode = darkMode ? "autocomp-dark" : "autocomp";
+    const searchResultDarkMode = darkMode ? "search-h3" : "search-h3-dark";
     
     /**
      * UseEffects
@@ -105,8 +105,9 @@ function Search(){
                     <img className="search-button-img" alt="icon-search" src="/resources/icon-search-mod-noc.svg"/>
                 </button>
             </div>
-            <div className={autocompleteDarkMode}>{autocompleteComponent}</div>
+            <div>{autocompleteComponent}</div>
             <h3 className={searchResultDarkMode}>Search Results</h3>
+            <br/>
         </div>
     );
 };

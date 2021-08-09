@@ -23,6 +23,8 @@ function App() {
       <div className = "App">
         <Header />
         <Search/>
+        <hr/>
+        <br/>
         <Gifs />
       </div>
     </AppProvider>
