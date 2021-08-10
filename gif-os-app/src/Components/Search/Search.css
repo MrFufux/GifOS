@@ -3,7 +3,7 @@
     flex-direction: column;
     align-content: center;
     height: auto;
-
+    position: relative;
   }
 
   .search-h1-img{
@@ -57,6 +57,14 @@
     margin-top: 7.9rem;
     color: #fff;
     /* margin-left: 50rem; */
+  }
+
+  .auto-complete{
+    position: absolute;
+    left: calc(50% - 10rem);
+    top: 33.4rem;
+    background-color: rgb(211, 210, 210);
+    border-radius: 5px;
   }
 
   

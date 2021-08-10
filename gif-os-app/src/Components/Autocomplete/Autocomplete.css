@@ -1,6 +1,6 @@
 .autocomp{
-    margin-left: 30rem;
-    width: 40%;
+    margin: 0 auto;
+    width: 20rem;
     height: auto;
     font-size: 2.4rem;
     font-weight: 400;
@@ -15,7 +15,7 @@
 }
 
 .autocomp-dark{
-    margin-left: 30rem;
+    margin: 0 auto;
     width: 40%;
     height: auto;
     font-size: 2.4rem;
