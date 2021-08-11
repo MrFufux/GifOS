@@ -19,7 +19,6 @@ import useDarkmode from "../../Hooks/useDarkMode";
 function Gifs() {
   //Global States
   const {
-    darkMode,
     search,
     setSearch,
     buttonSearch,
