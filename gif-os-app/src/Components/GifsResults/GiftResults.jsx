@@ -34,7 +34,7 @@ function Gifs() {
   //Darkmode variable
   const backDarkMode = useDarkmode("gifResult-container")
 
-  const textDarkMode = darkMode ? "" : "";
+  const textDarkMode = useDarkmode("gifResult-text-result")
 
   //useEffect request
   useEffect(() => {
@@ -76,7 +76,7 @@ function Gifs() {
   });
 
   //Gifs render conditional
-  const renderGifs = gif.length > 0 ? gifRender : <p>{textResult}</p>;
+  const renderGifs = gif.length > 0 ? gifRender : <p className={textDarkMode}>{textResult}</p>;
   return <section className={backDarkMode}>{renderGifs}</section>;
 }
 

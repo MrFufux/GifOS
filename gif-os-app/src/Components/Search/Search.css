@@ -61,10 +61,10 @@
 
   .auto-complete{
     position: absolute;
-    left: calc(50% - 10rem);
+    left: calc(50% - 11rem);
     top: 33.4rem;
     background-color: rgb(211, 210, 210);
-    border-radius: 5px;
+    border-radius: 0 0 5px 5px;
   }
 
   

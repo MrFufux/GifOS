@@ -116,6 +116,7 @@ function Search(){
             <div className="auto-complete">{autocompleteComponent}</div>
             <h3 className={searchResultDarkMode}>Search Results</h3>
             <br/>
+            <hr/>
         </div>
     );
 };

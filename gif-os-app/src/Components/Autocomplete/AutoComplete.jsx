@@ -1,6 +1,7 @@
 import './Autocomplete.css';
 import { AppContext } from '../../Contexts/AppContext';
 import { useContext } from 'react';
+import useDarkmode from '../../Hooks/useDarkMode';
 
 function Autocomplete({recommendation}){
 
