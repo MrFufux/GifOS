@@ -61,7 +61,7 @@ function Search(){
                 const respond = await APISuggest(search);
                 const ApiData = await respond.json();
                 setDataSuggest(ApiData.data)
-                console.log(ApiData);
+                // console.log(ApiData);
             }
             suggestion();
         }

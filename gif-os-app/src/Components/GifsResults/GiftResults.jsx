@@ -46,10 +46,10 @@ function Gifs() {
           setButtonSearch(false);
           setGif(data.data);
           setDataSuggest([]);
-          console.log(data.data);
+          // console.log(data.data);
           if (data.data.length === 0) {
             setTextResult(`Sorry. We haven't find ${search}`);
-            console.log(data);
+            // console.log(data);
           }
         } catch (error) {
           setSearch("Oops! Something went wrong :c Try again.");

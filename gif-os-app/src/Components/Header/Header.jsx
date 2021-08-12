@@ -24,7 +24,6 @@ function Header(){
     const backDarkMode = useDarkmode("header-container")
     const buttonDarkMode = useDarkmode("header-container-button")
 
-    console.log(backDarkMode);
     //event theme handler
     const setThemeHandler = () => setDarkMode(!darkMode);
     return(
