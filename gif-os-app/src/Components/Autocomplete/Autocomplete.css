@@ -10,12 +10,12 @@
 
 .autocomp:hover{
     cursor: pointer;
-    background-color: var(--white);
+    background-color: rgb(172, 172, 172);
 }
 
 /*Darkmode*/
 .autocomp.darkmode{
-    color: var(--white);
+    color: var(--purple-blue);
 }
 .autocomp-dark:hover{
     cursor: pointer;

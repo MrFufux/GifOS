@@ -16,7 +16,10 @@ import {AppContext} from "../../Contexts/AppContext";
 import Autocomplete from "../Autocomplete/AutoComplete";
 import {APISuggest} from "../../Utilities/constants";
 
-
+/**
+ * Hooks
+ */
+import useDarkmode from "../../Hooks/useDarkMode";
 
 function Search(){
     
@@ -44,11 +47,11 @@ function Search(){
     }
     
     //Dark Mode Variables
-    const backGroundDarkMode = darkMode ? "search-container-darkmode" : "search-container";
-    const h1DarkMode = darkMode ? "search-h1-dark" : "search-h1";
-    const inputDarkMode = darkMode ? "search-input-dark" : "search-input";
-    const buttonDarkMode = darkMode ? "search-button-dark" : "search-button";
-    const searchResultDarkMode = darkMode ? "search-h3" : "search-h3-dark";
+    const backGroundDarkMode = useDarkmode("search-container");
+    const h1DarkMode = useDarkmode("search-h1");
+    const inputDarkMode = useDarkmode("search-input");
+    const buttonDarkMode = useDarkmode("search-button");
+    const searchResultDarkMode = useDarkmode("search-h3");
     
     /**
      * UseEffects

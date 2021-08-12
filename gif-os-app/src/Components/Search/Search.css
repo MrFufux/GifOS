@@ -15,7 +15,7 @@
   .search-h1{
     margin-top: 6.5rem;
     font-size: 3.6rem;
-    /* font-family: var(--font-main); */
+    font-family: var(--font-main);
     font-weight: 700;
     line-height: 4.2rem;
     color: var(--purple-blue);
@@ -55,8 +55,7 @@
     display: flex;
     justify-content: center;
     margin-top: 7.9rem;
-    color: #fff;
-    /* margin-left: 50rem; */
+    color: var(--white);
   }
 
   .auto-complete{
@@ -70,44 +69,26 @@
   
   /*Dark Mode Styles*/
 
-  .search-container-darkmode{
+  .search-container.darkmode{
     background-color: var( --darkcolor);
   }
-  .search-h1-dark {
-    margin-top: 6.5rem;
-    font-size: 3.6rem;
+  .search-h1.darkmode {
     font-family: var(--font-family);
-    font-weight: 700;
-    line-height: 4.2rem;
     color: var(--purple-blue);
-    transition:  color 0.6s;
-    color: #fff;
+    color: var(--white);
   }
-  .search-input-dark{
-    background-color: #373737;
-    border: 0.1rem solid #fff;
-    color: #fff;
-    width: 50%;
-    height: 100%;
-    padding: 0.5rem 3rem;
-    border-radius: 6.1rem 0 0 6.1rem;
-    font-size: 2.4rem;
-    color: #fff;
-    outline: none;
-    transition: background-color 0.6s, color 0.6s;
+  .search-input.darkmode{
+    background-color: var(--darkcolor);
+    border: 0.1rem solid var(--white);
+    color: var(--white);
+    color: var(--white);
+    
   }
-  .search-button-dark{
-    border: 0.1rem solid #fff;
-    width: 5.2rem;
-    border-radius: 0 6.1rem 6.1rem 0;
+  .search-button.darkmode{
+    border: 0.1rem solid var(--white);
     background-color: var(--purple-blue);
-    transition: border 0.6s;
-    cursor: pointer;
   }
 
-  .search-h3-dark{
-    display: flex;
-    justify-content: center;
-    margin-top: 7.9rem;
+  .search-h3.darkmode{
     color: var(--purple-blue);
   }
