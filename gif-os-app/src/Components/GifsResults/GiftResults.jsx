@@ -31,9 +31,9 @@ function Gifs() {
   } = useContext(AppContext);
 
   //Darkmode variable
-  const backDarkMode = useDarkmode("gifResult-container")
+  const backDarkMode = useDarkmode("gifResult-container");
 
-  const textDarkMode = useDarkmode("gifResult-text-result")
+  const textDarkMode = useDarkmode("gifResult-text-result");
 
   //useEffect request
   useEffect(() => {

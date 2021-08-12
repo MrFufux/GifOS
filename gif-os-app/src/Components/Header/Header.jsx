@@ -20,10 +20,15 @@ function Header(){
     //global state
     const {darkMode, setDarkMode} = useContext(AppContext);
 
+    //Dark Mode variables
+    const backDarkMode = useDarkmode("header-container")
+    const buttonDarkMode = useDarkmode("header-container-button")
+
+    console.log(backDarkMode);
     //event theme handler
-    const setThemeHandler = (e) => setDarkMode(!darkMode);
+    const setThemeHandler = () => setDarkMode(!darkMode);
     return(
-        <div className={darkMode ? "header-dark": "header-container"}>
+        <div className={backDarkMode}>
             <img
                 src={darkMode ? "/resources/logo-mobile-modo-noct.svg" : "/resources/logo-desktop.svg"}
                 alt='GifOS logo'
@@ -31,7 +36,7 @@ function Header(){
             />
             <button 
                 onClick={setThemeHandler} 
-                className={darkMode ? "dark-header-container-button" : "header-container-button"}>
+                className={buttonDarkMode}>
                 {darkMode ? 'Light' : 'Dark'} Mode
             </button>
         </div>

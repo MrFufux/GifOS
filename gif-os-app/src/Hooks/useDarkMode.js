@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { AppContext } from "../Contexts/AppContext";
 
 function useDarkmode(classText) {
-    const {darkmode} = useContext(AppContext);
-    return darkmode ? `${classText} darkmode` : classText;
+    const {darkMode} = useContext(AppContext);
+    return darkMode ? `${classText} darkmode` : classText;
 }
 export default useDarkmode;

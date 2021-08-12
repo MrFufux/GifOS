@@ -6,12 +6,11 @@
     font-weight: 400;
     color: var(--purple-blue);
     z-index: 10;
-    /* border: 1px solid #000; */
 }
 
 .autocomp:hover{
     cursor: pointer;
-    background-color: #bbbbbb;
+    background-color: var(--white);
 }
 
 /*Darkmode*/

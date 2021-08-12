@@ -36,26 +36,13 @@
 Dark styles
 */
 
-.header-dark{
+.header-container.darkmode{
     background-color:var(--darkcolor);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 8.5rem;
 }
-  .dark-header-container-button {
+  .header-container-button.darkmode {
     color: var(--white);
-    border-color:var(--white);
-    border-style: solid;
+    border-color: var(--white);
     background-color: var(--darkcolor);
-    width: 14.8rem;
-    height: 4.3rem;
-    border-style: solid;
-    border-radius: 2rem;
-    outline: none;
-    cursor: pointer;
-    margin: 0 6.5rem 0 0;
-
 }
 
 
