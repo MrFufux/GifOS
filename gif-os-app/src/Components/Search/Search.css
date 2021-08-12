@@ -55,7 +55,7 @@
     display: flex;
     justify-content: center;
     margin-top: 7.9rem;
-    color: var(--white);
+    color: var(--purple-blue);
   }
 
   .auto-complete{
@@ -90,5 +90,5 @@
   }
 
   .search-h3.darkmode{
-    color: var(--purple-blue);
+    color: var(--white);
   }
